@@ -1,0 +1,69 @@
+<!doctype html>
+<html lang="no">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Quiz – DAT110</title>
+  <link rel="stylesheet" href="assets/css/style.css">
+</head>
+<body data-page="quiz">
+  <div class="container">
+    <h1>🧠 Quiz</h1>
+    <p class="muted">Flervalg fra hele faget: alle Oppgave 1-spørsmålene fra tidligere eksamener (ordrett, engelsk), Canvas-quizene, spørsmålene fra læringsløpet og nye spørsmål i eksamensstil. Noen spørsmål har flere riktige svar – akkurat som på eksamen. Trykk «Nullstill» for å ta en ny runde.</p>
+    <div class="grid grid-main-side">
+      <div class="card">
+        <div class="grid grid-2">
+          <label>Tema<br><select id="qTopic" style="width:100%"></select></label>
+          <label>Kilde<br><select id="qSrc" style="width:100%">
+            <option value="">Alle kilder</option>
+            <option value="exam">Ekte eksamensspørsmål (Oppgave 1)</option>
+            <option value="canvas">Canvas-quizer</option>
+            <option value="learn">Læringsløp (norsk)</option>
+            <option value="extra">Nye øvingsspørsmål (eksamensstil)</option>
+          </select></label>
+          <label>Antall spørsmål<br><select id="qCount" style="width:100%">
+            <option value="10">10</option><option value="20" selected>20</option><option value="30">30</option><option value="50">50</option><option value="all">Alle</option>
+          </select></label>
+          <div class="small" style="padding-top:4px">
+            <label><input type="checkbox" id="qShuffle" checked> Tilfeldig rekkefølge</label><br>
+            <label><input type="checkbox" id="qShuffleOpts" checked> Stokk svaralternativene</label><br>
+            <label><input type="checkbox" id="qWrong"> Bare spørsmål jeg bommet på sist</label>
+          </div>
+        </div>
+        <div class="btn-row"><button class="btn" id="qStart">▶ Start quiz</button><span class="small muted" id="qPool"></span></div>
+      </div>
+      <div class="card">
+        <h3 class="mt0">Din treffsikkerhet per tema</h3>
+        <p class="small muted mt0">Basert på siste svar per spørsmål. Under 75 % → repeter modulen.</p>
+        <div id="qStats"></div>
+        <button class="btn small ghost" id="qResetStats" style="margin-top:8px">Nullstill statistikk</button>
+      </div>
+    </div>
+    <div id="quizOut"></div>
+  </div>
+  <script src="assets/js/core.js"></script>
+  <script src="assets/data/modules/01-intro.js"></script>
+  <script src="assets/data/modules/02-layers.js"></script>
+  <script src="assets/data/modules/03-ds-intro.js"></script>
+  <script src="assets/data/modules/04-app.js"></script>
+  <script src="assets/data/modules/05-proc.js"></script>
+  <script src="assets/data/modules/06-rpc.js"></script>
+  <script src="assets/data/modules/07-mom.js"></script>
+  <script src="assets/data/modules/08-mcast.js"></script>
+  <script src="assets/data/modules/09-transport.js"></script>
+  <script src="assets/data/modules/10-network.js"></script>
+  <script src="assets/data/modules/11-routing.js"></script>
+  <script src="assets/data/modules/12-link.js"></script>
+  <script src="assets/data/modules/13-naming.js"></script>
+  <script src="assets/data/modules/14-clocks.js"></script>
+  <script src="assets/data/modules/15-mutex.js"></script>
+  <script src="assets/data/modules/16-consistency.js"></script>
+  <script src="assets/data/modules/17-fault.js"></script>
+  <script src="assets/data/modules/18-security.js"></script>
+  <script src="assets/data/modules/19-projects.js"></script>
+  <script src="assets/data/quiz-exam.js"></script>
+  <script src="assets/data/quiz-canvas.js"></script>
+  <script src="assets/data/quiz-extra.js"></script>
+  <script src="assets/js/quiz.js"></script>
+</body>
+</html>

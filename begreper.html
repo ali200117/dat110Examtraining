@@ -1,0 +1,37 @@
+<!doctype html>
+<html lang="no">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Begreper – DAT110</title>
+  <link rel="stylesheet" href="assets/css/style.css">
+</head>
+<body data-page="glossary">
+  <div class="container">
+    <h1>📖 Begreper</h1>
+    <p class="muted">Alle sentrale begreper i faget med norsk forklaring, engelsk fagterm (som brukes på eksamen) og eksamenstips. Bruk listen til oppslag, flashcards for pugging og testen for å sjekke at du kjenner igjen begrepet ut fra forklaringen.</p>
+    <div class="card">
+      <div class="flex">
+        <div class="trainer-tabs" style="margin:0">
+          <button data-mode="list" class="active">📋 Liste</button>
+          <button data-mode="cards">🃏 Flashcards</button>
+          <button data-mode="test">✍️ Test meg</button>
+        </div>
+        <span class="spacer"></span>
+        <input type="search" id="glSearch" placeholder="Søk (f.eks. ARP, quorum, stub …)" style="min-width:240px">
+        <select id="glTopic"></select>
+      </div>
+      <div class="flex hidden" id="cardOpts" style="margin-top:10px">
+        <label class="small"><input type="checkbox" id="glOnlyUnknown"> Bare begreper jeg ikke kan</label>
+        <label class="small"><input type="checkbox" id="glEnFirst"> Vis engelsk term først</label>
+        <button class="btn small ghost" id="glReset">↺ Nullstill «kan»-markeringer</button>
+      </div>
+      <div class="small muted" id="glCount" style="margin-top:8px"></div>
+    </div>
+    <div id="glOut"></div>
+  </div>
+  <script src="assets/js/core.js"></script>
+  <script src="assets/data/glossary-data.js"></script>
+  <script src="assets/js/glossary.js"></script>
+</body>
+</html>
